@@ -16,7 +16,7 @@
 2. Created ResourceController with request mapping end point of '/resource/endpoint'
 
 ## Configuration for Method level security configration
-1. Added "@@EnableGlobalMethodSecurity(prePostEnabled=true)" on application class to enable spring to recognize and apply method level security configurations
+1. Added "@EnableGlobalMethodSecurity(prePostEnabled=true)" on application class to enable spring to recognize and apply method level security configurations
 2. Added "@PreAuthorize("hasRole('XXXX')") on endpoint in controller to define role which can access method
 
 ## How to run project

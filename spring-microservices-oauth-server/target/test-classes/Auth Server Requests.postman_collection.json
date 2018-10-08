@@ -1,0 +1,106 @@
+{
+	"info": {
+		"name": "Auth Server Requests",
+		"_postman_id": "b4dd8c28-0ae5-89c4-8672-0ca3753151de",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9090/oauth/token?grant_type=password&username=user1&password=password1",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "websecret",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "webapp",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:9090/oauth/token?grant_type=password&username=user1&password=password1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"equals": true
+						},
+						{
+							"key": "username",
+							"value": "user1",
+							"equals": true
+						},
+						{
+							"key": "password",
+							"value": "password1",
+							"equals": true
+						}
+					]
+				},
+				"description": "Obtain Access Token"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/resource/endpoint?access_token=7d7584ae-3b28-42b0-96f0-c9e8997dc320",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "access_token",
+							"value": "6d9f946c-ad6e-4671-a116-1a2cebebe772",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9090/resource/endpoint?access_token=7d7584ae-3b28-42b0-96f0-c9e8997dc320",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"resource",
+						"endpoint"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "7d7584ae-3b28-42b0-96f0-c9e8997dc320",
+							"equals": true
+						}
+					]
+				},
+				"description": "Access Resource using token"
+			},
+			"response": []
+		}
+	]
+}
