@@ -6,10 +6,14 @@
 > JDBC
 > HSQL DB
 
-## How project is configured
-1. After creating spring boot app with above starters add "@EnableAuthorizationServer" to application class.
-2. Create AuthorizationServerConfig  extending AuthorizationServerConfigurerAdapter and configure authorization client
-3. Create WebSecurityConfig extending WebSecurityConfigurerAdapter and configure user.
+## Configuration as Authorization Server
+1. Added  "@EnableAuthorizationServer" to application class to configure application as authorization server.
+2. Created AuthorizationServerConfig  extending AuthorizationServerConfigurerAdapter and configured authorization client
+3. Created WebSecurityConfig extending WebSecurityConfigurerAdapter and configured user.
+
+## Configuration as Resource Serer
+1. Added "@EnableResourceServer" to application class to configure application as Resource Server
+2. Created ResourceController with request mapping end point of '/resource/endpoint'
 
 ## How to run project
 1. Import this project as "Existing Maven Project"
