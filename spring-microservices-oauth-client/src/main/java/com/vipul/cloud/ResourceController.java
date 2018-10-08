@@ -24,7 +24,7 @@ public class ResourceController {
 	public String execute(Principal principal) throws URISyntaxException {
 		User user = (User) ((Authentication) principal).getPrincipal();
 		URI uri = new URI("http://localhost:9090/resource/endpoint");
-		RequestEntity<String> request = new RequestEntity<String>(HttpMethod.POST, uri);
+		RequestEntity<String> request = new RequestEntity<String>(HttpMethod.GET, uri);
 		AccessTokenRequest accessTokenRequest = this.restTemplate.getOAuth2ClientContext().getAccessTokenRequest();
 		accessTokenRequest.set("username", user.getUsername());
 		accessTokenRequest.set("password", user.getPassword());

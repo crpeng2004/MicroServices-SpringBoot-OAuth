@@ -4,7 +4,7 @@
 > Cloud Oauth
 > Security
 > JDBC
-> HSQL DB
+> H2
 
 ## Configuration as Authorization Server
 1. Added  "@EnableAuthorizationServer" on application class to configure application as authorization server.
