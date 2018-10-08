@@ -7,13 +7,17 @@
 > HSQL DB
 
 ## Configuration as Authorization Server
-1. Added  "@EnableAuthorizationServer" to application class to configure application as authorization server.
+1. Added  "@EnableAuthorizationServer" on application class to configure application as authorization server.
 2. Created AuthorizationServerConfig  extending AuthorizationServerConfigurerAdapter and configured authorization client
 3. Created WebSecurityConfig extending WebSecurityConfigurerAdapter and configured user.
 
 ## Configuration as Resource Serer
-1. Added "@EnableResourceServer" to application class to configure application as Resource Server
+1. Added "@EnableResourceServer" on application class to configure application as Resource Server
 2. Created ResourceController with request mapping end point of '/resource/endpoint'
+
+## Configuration for Method level security configration
+1. Added "@@EnableGlobalMethodSecurity(prePostEnabled=true)" on application class to enable spring to recognize and apply method level security configurations
+2. Added "@PreAuthorize("hasRole('XXXX')") on endpoint in controller to define role which can access method
 
 ## How to run project
 1. Import this project as "Existing Maven Project"
