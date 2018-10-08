@@ -10,6 +10,7 @@ import org.springframework.security.oauth2.client.token.grant.password.ResourceO
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableOAuth2Client;
 
 @SpringBootApplication
+// This is to enable the application as Oauth Client
 @EnableOAuth2Client
 public class SpringMicroservicesOauthClientApplication {
 
