@@ -22,7 +22,12 @@
 
 ### Testing with Postman
 #### Obtaining Access Token
-1. Post Request with URL"http://localhost:9090/oauth/token
+1. Post Request with URL"http://localhost:9090/oauth/token"
 2. Under "Authorization" tab, select "Basic Auth" with username as "webapp" and password as "websecret".
 3. In "Body" tab, add three parameters with keys grant_type, username and password and with values password, user1, password1 respectively.
 4. Send request and the response body should have access_token.
+#### Accessing Resource on Resource server
+1. Copy obtained access_token
+2. Create a get request with URL "http://localhost:9090/resource/endpoint" 
+3. Add a request param with key as "access_token" and value as copied access_token.
+4. Send the request and resource should be accessible.
