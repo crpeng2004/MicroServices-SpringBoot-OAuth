@@ -21,6 +21,7 @@
 3. Use Postman or equivalent app to test it
 
 ### Testing with Postman
+You can import postman sample requests present in project and test or follow the steps given below.
 #### Obtaining Access Token
 1. Post Request with URL"http://localhost:9090/oauth/token"
 2. Under "Authorization" tab, select "Basic Auth" with username as "webapp" and password as "websecret".
