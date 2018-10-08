@@ -1,4 +1,4 @@
-#OAuth Server using Spring
+# OAuth Server using Spring
 
 ## Starters used
 > Cloud Oauth
